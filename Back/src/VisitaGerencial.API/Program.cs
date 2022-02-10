@@ -17,6 +17,7 @@ builder.Services.AddScoped<Visita>();
 builder.Services.AddScoped<Area>();
 builder.Services.AddScoped<AreaParticipante>();
 builder.Services.AddScoped<AcessoSistema>();
+builder.Services.AddScoped<AnexoApontamento>();
 
 var app = builder.Build();
 

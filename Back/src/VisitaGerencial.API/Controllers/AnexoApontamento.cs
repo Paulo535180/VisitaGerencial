@@ -6,25 +6,26 @@ namespace VisitaGerencial.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AcessoSistemaController
+    public class AnexoApontamentoController : ControllerBase
     {
         private readonly DataContext _dataContext;
 
-        public AcessoSistemaController(DataContext dataContext)
+        public AnexoApontamentoController(DataContext dataContext)
         {
             _dataContext = dataContext;
         }
 
         [HttpGet("")]
-        public IEnumerable<AcessoSistema> Get()
+        public IEnumerable<AnexoApontamento> Get()
         {
-            return _dataContext.CVG_ACESSO_SISTEMA;
+            return _dataContext.CVG_ANEXO_APONTAMENTO;
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<AcessoSistema> GetById(int id)
+        public IEnumerable<AnexoApontamento> GetById(int id)
         {
-            return _dataContext.CVG_ACESSO_SISTEMA.Where(acesso => acesso.id == id);
+            return _dataContext.CVG_ANEXO_APONTAMENTO.Where(anexo => anexo.id == id);
         }
+
     }
 }

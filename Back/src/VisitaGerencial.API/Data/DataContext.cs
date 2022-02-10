@@ -12,4 +12,5 @@ namespace VisitaGerencial.API.Data;
         public DbSet<Area> CVG_AREA {get;set;}
         public DbSet<AreaParticipante> CVG_AREA_PARTICIPANTE {get;set;}
         public DbSet<AcessoSistema> CVG_ACESSO_SISTEMA {get;set;}
+        public DbSet<AnexoApontamento> CVG_ANEXO_APONTAMENTO {get;set;}
     }
